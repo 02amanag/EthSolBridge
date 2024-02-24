@@ -40,3 +40,34 @@ To install the required dependencies, run:
 
 ```bash
 npm install
+
+## Deployment
+
+## Ethereum
+
+we are using Sepolia testnet for Ethereum connection. I used remix IDE for development and deployment.
+Deployment process goes with following cronology
+
+### Deploy 
+    - TokenEth
+        - Mint some token to Address
+    - BridgeEth (Use TokenEth address at deployment constructor)
+        - Update admin in TokenEth as BridgeEth's address
+
+### Configuration 
+    - TokenEth Address - TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+    - Bridge Address - 6d7j8E4RuXZsy4tNFzmZ8QV7rf6Pn575iHLyMX7VdeZ2
+
+
+## Solana
+
+we are using devnet for Solana connection. I used solana-cli for development and deployment of spl token.
+With configured account as admin. Using following information we setup solanaTokenMint.js script for minting token to respective address.
+
+### Configuration 
+    - Token Program ID - TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+    - Token Mint Address - 6d7j8E4RuXZsy4tNFzmZ8QV7rf6Pn575iHLyMX7VdeZ2
+
+As spl token is configured with 9 decimal places, we will be multiplying amount with 1000000000 to mint equal token.
+
+
