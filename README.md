@@ -44,6 +44,8 @@ npm install
 
 ## Deployment
 
+Run ```node script/bridge.js``` before any tranaction. So the Event can start listening the transaction and take necessary action when required.
+
 ### Ethereum
 
 we are using Sepolia testnet for Ethereum connection. I used remix IDE for development and deployment.
